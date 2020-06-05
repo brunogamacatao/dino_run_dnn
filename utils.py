@@ -46,6 +46,11 @@ class DinoSeleniumEnv(object):
         socre = ''.join(socre) # it returns as vector of str digits [1,0,0] as 100
         return int(socre)
 
+    def get_acceleration(self):
+        acc = self._driver.execute_script("return Runner.instance_.currentSpeed")
+        print('get_acceleration', acc)
+        return float(acc)
+
     def end_game(self):
         self._driver.close()
     

@@ -74,8 +74,8 @@ def executa_jogo(rede):
     print('ob0: {} - ob1: {} - ob2: {} - acao: {}'.format(obstaculo0, obstaculo1, obstaculo2, acao))
 
     if acao > 0.5:
+      #time.sleep(0.3) # delay
       dino.press_up() # pula
-      time.sleep(0.3) # delay
    
     if dino.is_crashed():
       return dino.get_score(), entradas, saidas
