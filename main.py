@@ -10,8 +10,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 # Ideia para o treinamento da rede
-# entrada: obstáculo
-# saída: acao, delay
+# entrada: 3 sensores adiante
+# saída: acao (pula / não pula)
 class ControlaDino(nn.Module):
   def __init__(self):
     super(ControlaDino, self).__init__()
@@ -32,7 +32,6 @@ criterion = nn.MSELoss()
 
 # Otimizador
 optimizer = optim.Adam(rede.parameters(), 1e-3)
-#optimizer = optim.SGD(rede.parameters(), lr=0.01, momentum=0.5)
 
 def treina(entradas, saidas):
   for epoch in range(100):

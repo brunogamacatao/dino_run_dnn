@@ -61,9 +61,8 @@ class DinoSeleniumEnv(object):
         return screen
 
 
-def show_image():
+def show_image(screen):
     while True:
-        screen = (yield)
         title = "fed_image"
         image = cv2.resize(screen, (800,400))
         cv2.imshow(title, image)
