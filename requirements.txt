@@ -6,4 +6,4 @@ pkg-resources==0.0.0
 selenium==3.141.0
 torch==1.5.0+cpu
 torchvision==0.6.0+cpu
-urllib3==1.25.9
+urllib3==1.26.5
